@@ -65,7 +65,8 @@ foreach (Cartes.Couleurs couleur in Enum.GetValues(typeof(Cartes.Couleurs)))
 {
     foreach (Cartes.Valeurs valeur in Enum.GetValues(typeof(Cartes.Valeurs)))
     {
-        jeuDeCartes[i] = new Cartes { Couleur = couleur, Valeur = valeur };
+        jeuDeCartes[i].Couleur = couleur;
+        jeuDeCartes[i].Valeur = valeur;
         i++;
     }
 }
