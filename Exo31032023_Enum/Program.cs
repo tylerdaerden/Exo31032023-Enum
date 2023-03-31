@@ -6,19 +6,19 @@
 
 using Exo31032023_Enum;
 
-foreach ( string val in Enum.GetNames(typeof(couleurs)))
-{
-    Console.WriteLine(val);
-}
+//foreach ( string val in Enum.GetNames(typeof(couleurs)))
+//{
+//    Console.WriteLine(val);
+//}
 
-foreach (int val2 in Enum.GetValues(typeof(couleurs)))
-{
-    Console.WriteLine(val2);
-}
+//foreach (int val2 in Enum.GetValues(typeof(couleurs)))
+//{
+//    Console.WriteLine(val2);
+//}
 
-Console.WriteLine(  );
-Console.WriteLine("____________________________________________________");
-Console.WriteLine(  );
+//Console.WriteLine(  );
+//Console.WriteLine("____________________________________________________");
+//Console.WriteLine(  );
 
 
 
@@ -29,19 +29,19 @@ Console.WriteLine(  );
 
 //1.2 Créer une énumération pour les valeurs (as = 14, deux = 2, trois = 3, ..., Roi = 13)
 
-foreach (string val3 in Enum.GetNames(typeof(valeurs)))
-{
-    Console.WriteLine(val3);
-}
+//foreach (string val3 in Enum.GetNames(typeof(valeurs)))
+//{
+//    Console.WriteLine(val3);
+//}
 
-foreach (int val4 in Enum.GetValues(typeof(valeurs)))
-{
-    Console.WriteLine(val4);
-}
+//foreach (int val4 in Enum.GetValues(typeof(valeurs)))
+//{
+//    Console.WriteLine(val4);
+//}
 
-Console.WriteLine();
-Console.WriteLine("____________________________________________________");
-Console.WriteLine();
+//Console.WriteLine();
+//Console.WriteLine("____________________________________________________");
+//Console.WriteLine();
 
 
 
@@ -58,15 +58,14 @@ Console.WriteLine();
 //À l'aide d'une boucle « foreach » définir les couleurs et les valeurs de chacune des cartes
 //Afficher les cartes (Définir si cela fonctionne : si oui pourquoi, sinon pourquoi)
 
-Cartes[] jeuDeCartes = new Cartes[52]; // Déclaration du tableau de Cartes
+Cartes[] jeuDeCartes = new Cartes[52];
 
-// Remplissage du tableau de Cartes avec toutes les couleurs et valeurs possibles
 int i = 0;
 foreach (Cartes.Couleurs couleur in Enum.GetValues(typeof(Cartes.Couleurs)))
 {
     foreach (Cartes.Valeurs valeur in Enum.GetValues(typeof(Cartes.Valeurs)))
     {
-        jeuDeCartes[i] = new Cartes { Couleur = couleur, Valeur = valeur }; // Ajout de la carte au tableau
+        jeuDeCartes[i] = new Cartes { Couleur = couleur, Valeur = valeur };
         i++;
     }
 }
@@ -76,6 +75,10 @@ foreach (Cartes carte in jeuDeCartes)
 {
     Console.WriteLine(carte.Valeur + " de " + carte.Couleur);
 }
+
+Console.WriteLine(  );
+Console.WriteLine("______________________________________");
+
 #endregion
 
 #endregion
