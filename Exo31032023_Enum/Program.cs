@@ -58,20 +58,24 @@ Console.WriteLine();
 //À l'aide d'une boucle « foreach » définir les couleurs et les valeurs de chacune des cartes
 //Afficher les cartes (Définir si cela fonctionne : si oui pourquoi, sinon pourquoi)
 
+Cartes[] jeuDeCartes = new Cartes[52]; // Déclaration du tableau de Cartes
 
+// Remplissage du tableau de Cartes avec toutes les couleurs et valeurs possibles
+int i = 0;
+foreach (Cartes.Couleurs couleur in Enum.GetValues(typeof(Cartes.Couleurs)))
+{
+    foreach (Cartes.Valeurs valeur in Enum.GetValues(typeof(Cartes.Valeurs)))
+    {
+        jeuDeCartes[i] = new Cartes { Couleur = couleur, Valeur = valeur }; // Ajout de la carte au tableau
+        i++;
+    }
+}
 
-//Cartes[] jeuDeCartes = new Cartes[52];
-//int icheck = 0;
-//foreach ( Enum valeurs in jeuDeCartes)
-//{
-//    foreach (string couleur in couleurs)
-//    {
-//        jeuDeCartes[icheck]. = valeur;
-//        jeuDeCartes[icheck].Couleur = couleur;
-//        icheck++;
-//    }
-//}
-
+// Affichage du contenu du tableau de Cartes
+foreach (Cartes carte in jeuDeCartes)
+{
+    Console.WriteLine(carte.Valeur + " de " + carte.Couleur);
+}
 #endregion
 
 #endregion
